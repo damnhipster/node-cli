@@ -1,0 +1,18 @@
+{
+  "name": "node-cli-package",
+  "version": "0.0.0",
+  "description": "Testing node cli capabilities",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hem Brahmbhatt (damnhipster)",
+  "license": "BSD",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/damnhipster/node-cli-package.git"
+  },
+  "bin": {
+    "node-cli-package": "./bin/node-cli-package"
+  }
+}

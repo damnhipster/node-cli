@@ -1,0 +1,40 @@
+#!/usr/bin/env node
+
+var argv = process.argv.slice(2)
+  , version = require("../package.json").version
+  , print = require("../index")
+
+main()
+
+function main () {
+  if (!argv.length) return help()
+  while (argv.length) {
+    var a = argv.shift()
+    var i = a.indexOf('=')
+    if (i !== -1) {
+      var text = a.slice(i + 1, a.length)
+      a = a.slice(0, i)
+    }
+    switch (a) {
+      case "-t": case "--text":
+        if(text) {
+          return print(text)
+        }
+        fail()
+      case "-v": case "--version":
+        return print(version)
+      case "-h": case "--help": case "-?":
+        return help()
+      default:
+        break
+    }
+  }
+}
+
+function fail () { process.exit(1) }
+
+function help () {
+  console.log([ "-t, --text=\"something\"",
+                "-h, --help",
+                "-v, --version"].join("\n"))
+}
