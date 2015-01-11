@@ -1,4 +1,4 @@
-# node-cli-package
+# node-cli
 Experimenting with node's CLI capabilites
 
 ###Installation
