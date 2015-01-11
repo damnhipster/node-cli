@@ -10,7 +10,7 @@
   "license": "BSD",
   "repository": {
     "type": "git",
-    "url": "git://github.com/damnhipster/node-cli-package.git"
+    "url": "git://github.com/damnhipster/node-cli.git"
   },
   "bin": {
     "node-cli-package": "./bin/node-cli-package"
